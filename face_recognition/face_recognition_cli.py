@@ -26,6 +26,8 @@ def scan_known_people(known_people_folder):
         if len(encodings) == 0:
             click.echo("WARNING: No faces found in {}. Ignoring file.".format(file))
         else:
+            # rename the photo using the known_name
+            #os.rename(basename, new_file)
             known_names.append(basename)
             known_face_encodings.append(encodings[0])
 
